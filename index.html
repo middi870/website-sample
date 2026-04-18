@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pankhuri Hospital Bareilly – Gynecology, Orthopedic, Surgery &amp; Emergency</title>
+  <meta name="description" content="Pankhuri Hospital in Kareli, Bareilly — trusted by local families for gynecology, orthopedic care, general surgery and 24/7 emergency. Book appointment on WhatsApp." />
+  <meta name="keywords" content="hospital near me bareilly, hospital in kareli bareilly, gynecologist bareilly, orthopedic doctor bareilly, emergency hospital bareilly" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy:      #14354A;
+      --navy-mid:  #1E4D6B;
+      --teal:      #2A7F6F;
+      --teal-lt:   #3DA08E;
+      --gold:      #B8844A;
+      --gold-lt:   #D4A76A;
+      --cream:     #F7F5F0;
+      --white:     #FFFFFF;
+      --text:      #1C2B35;
+      --text-mid:  #4A5E6A;
+      --text-lt:   #7A8F9B;
+      --border:    #E2E8EC;
+      --red:       #C0392B;
+      --shadow-sm: 0 2px 12px rgba(20,53,74,.07);
+      --shadow-md: 0 6px 28px rgba(20,53,74,.11);
+      --shadow-lg: 0 16px 48px rgba(20,53,74,.14);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body:    'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--font-body); color: var(--text); background: var(--white); font-size: 16px; line-height: 1.65; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    a  { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .section-label { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+    .section-title { font-family: var(--font-display); font-size: clamp(26px, 4.5vw, 40px); font-weight: 600; color: var(--navy); line-height: 1.2; margin-bottom: 14px; }
+    .section-sub { font-size: 15px; color: var(--text-mid); max-width: 560px; line-height: 1.75; }
+    .gold-line { width: 40px; height: 2px; background: var(--gold); margin-bottom: 20px; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 15px 30px; border-radius: 50px; font-family: var(--font-body); font-size: 14px; font-weight: 600; letter-spacing: .03em; cursor: pointer; border: none; transition: transform .2s, box-shadow .2s, background .2s; white-space: nowrap; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary  { background: var(--navy); color: var(--white); box-shadow: 0 4px 20px rgba(20,53,74,.3); }
+    .btn-primary:hover  { background: var(--navy-mid); box-shadow: 0 8px 28px rgba(20,53,74,.35); }
+    .btn-whatsapp { background: #25D366; color: var(--white); box-shadow: 0 4px 20px rgba(37,211,102,.3); }
+    .btn-whatsapp:hover { background: #1ebe5d; box-shadow: 0 8px 28px rgba(37,211,102,.4); }
+    .btn-call     { background: var(--white); color: var(--navy); box-shadow: 0 4px 20px rgba(0,0,0,.18); }
+    .btn-call:hover     { background: var(--cream); }
+    .btn-outline  { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
+    .btn-outline:hover  { background: var(--navy); color: var(--white); }
+
+    /* URGENCY BAR */
+    .urgency-bar { background: var(--red); color: white; text-align: center; padding: 9px 20px; font-size: 13px; font-weight: 500; letter-spacing: .02em; }
+    .urgency-bar a { color: white; text-decoration: underline; font-weight: 700; }
+
+    /* HEADER */
+    .header { position: sticky; top: 0; z-index: 900; background: rgba(255,255,255,.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); transition: box-shadow .3s; }
+    .header.scrolled { box-shadow: var(--shadow-md); }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+    .nav-logo { display: flex; align-items: center; gap: 12px; }
+    .logo-mark { width: 38px; height: 38px; background: var(--navy); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+    .logo-name { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--navy); }
+    .logo-sub  { font-size: 10px; font-weight: 500; color: var(--text-lt); letter-spacing: .1em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { font-size: 13.5px; font-weight: 500; color: var(--text-mid); transition: color .2s; }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-cta { display: flex; gap: 10px; align-items: center; }
+    .nav-ham { display: none; background: none; border: none; cursor: pointer; padding: 6px; color: var(--navy); }
+    .mobile-menu { display: none; flex-direction: column; background: var(--white); border-top: 1px solid var(--border); padding: 16px 20px 20px; gap: 4px; }
+    .mobile-menu a { padding: 10px 0; font-size: 15px; font-weight: 500; color: var(--text); border-bottom: 1px solid var(--border); }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu.open { display: flex; }
+
+    /* HERO */
+    .hero { position: relative; min-height: 88vh; display: flex; align-items: center; overflow: hidden; background: linear-gradient(135deg, #0F2A3A 0%, #1A4560 55%, #1E5C5A 100%); }
+    .hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 70% 20%, rgba(45,127,111,.25) 0%, transparent 50%), radial-gradient(circle at 15% 80%, rgba(184,132,74,.1) 0%, transparent 40%); pointer-events: none; }
+    .hero::after  { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.022'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); pointer-events: none; }
+    .hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 48px; width: 100%; padding: 80px 0; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); border-radius: 50px; padding: 6px 16px 6px 10px; margin-bottom: 24px; }
+    .hero-badge-dot { width: 8px; height: 8px; background: #4ECCA3; border-radius: 50%; animation: pulse-green 2s infinite; }
+    @keyframes pulse-green { 0%,100% { box-shadow: 0 0 0 0 rgba(78,204,163,.5); } 50% { box-shadow: 0 0 0 6px rgba(78,204,163,0); } }
+    .hero-badge span { font-size: 12px; font-weight: 500; color: rgba(255,255,255,.85); letter-spacing: .06em; }
+    .hero-title { font-family: var(--font-display); font-size: clamp(34px, 5.5vw, 58px); font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 16px; letter-spacing: -.01em; }
+    .hero-title em { font-style: italic; color: var(--gold-lt); }
+    .hero-sub { font-size: 16px; color: rgba(255,255,255,.75); max-width: 460px; line-height: 1.75; margin-bottom: 10px; }
+    .hero-local { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: rgba(255,255,255,.45); margin-bottom: 30px; }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 10px; }
+    .hero-nudge { font-size: 12px; color: rgba(255,255,255,.38); margin-bottom: 36px; }
+    .hero-trust { display: flex; gap: 28px; flex-wrap: wrap; }
+    .trust-item { display: flex; flex-direction: column; }
+    .trust-num { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--white); line-height: 1; }
+    .trust-label { font-size: 11px; color: rgba(255,255,255,.45); letter-spacing: .07em; text-transform: uppercase; margin-top: 4px; }
+    .trust-label small { display: block; font-size: 9px; opacity: .65; margin-top: 2px; letter-spacing: 0; text-transform: none; }
+    .trust-divider { width: 1px; background: rgba(255,255,255,.15); align-self: stretch; }
+    .hero-visual { display: flex; justify-content: center; align-items: center; }
+    .hero-card-stack { position: relative; width: 100%; max-width: 400px; }
+    .hero-img-frame { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255,255,255,.08); aspect-ratio: 4/5; background: var(--navy-mid); }
+    .hero-img-frame img { width: 100%; height: 100%; object-fit: cover; opacity: .9; }
+    .float-card { position: absolute; background: var(--white); border-radius: var(--radius-md); padding: 13px 17px; box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 12px; }
+    .float-card-icon { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .float-card-text .label { font-size: 10px; color: var(--text-lt); letter-spacing: .06em; text-transform: uppercase; }
+    .float-card-text .value { font-size: 14px; font-weight: 600; color: var(--navy); margin-top: 2px; }
+    .fcard-1 { bottom: -18px; left: -28px; }
+    .fcard-2 { top: 28px; right: -28px; }
+
+    /* HOW TO BOOK */
+    .how { padding: 88px 0; background: var(--white); }
+    .how-head { margin-bottom: 52px; }
+    .how-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; position: relative; }
+    .how-steps::before { content: ''; position: absolute; top: 36px; left: calc(16.66% + 18px); right: calc(16.66% + 18px); height: 2px; background: var(--border); z-index: 0; }
+    .how-step { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 24px 32px; position: relative; z-index: 1; }
+    .how-step-num { width: 72px; height: 72px; border-radius: 50%; background: var(--navy); color: var(--white); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 26px; font-weight: 700; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(20,53,74,.25); flex-shrink: 0; }
+    .how-step:nth-child(2) .how-step-num { background: var(--teal); }
+    .how-step:nth-child(3) .how-step-num { background: var(--gold); }
+    .how-step-title { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
+    .how-step-desc { font-size: 14px; color: var(--text-mid); line-height: 1.65; max-width: 220px; }
+    .how-cta { text-align: center; margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--border); }
+    .how-cta p { font-size: 14px; color: var(--text-mid); margin-bottom: 20px; }
+    .how-cta-btns { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; }
+
+    /* SERVICES */
+    .services { padding: 88px 0; background: var(--cream); }
+    .services-head { margin-bottom: 48px; }
+    .services-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+    .service-card { background: var(--white); border-radius: var(--radius-md); padding: 30px 22px; border: 1px solid var(--border); box-shadow: var(--shadow-sm); transition: transform .3s, box-shadow .3s, border-color .3s; position: relative; overflow: hidden; }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--teal), var(--navy)); opacity: 0; transition: opacity .3s; }
+    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: transparent; }
+    .service-card:hover::before { opacity: 1; }
+    .service-icon { width: 50px; height: 50px; border-radius: 13px; background: linear-gradient(135deg, var(--navy), var(--navy-mid)); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+    .service-icon svg { width: 22px; height: 22px; color: white; }
+    .service-name { font-family: var(--font-display); font-size: 19px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+    .service-desc { font-size: 13px; color: var(--text-mid); line-height: 1.65; }
+
+    /* DOCTORS */
+    .doctors { padding: 88px 0; background: var(--white); }
+    .doctors-head { margin-bottom: 48px; }
+    .doctors-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .doctor-card { border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm); background: var(--white); transition: transform .3s, box-shadow .3s; }
+    .doctor-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+    .doctor-img-placeholder { width: 100%; aspect-ratio: 4/3; }
+    .doctor-info { padding: 20px 22px 24px; }
+    .doctor-spec { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
+    .doctor-name { font-family: var(--font-display); font-size: 21px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+    .doctor-bio  { font-size: 13px; color: var(--text-mid); line-height: 1.6; margin-bottom: 12px; }
+    .doctor-sample { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--text-lt); background: var(--cream); border: 1px dashed var(--border); border-radius: 4px; padding: 3px 8px; margin-bottom: 8px; }
+    .doctor-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .doctor-tag { background: var(--cream); border: 1px solid var(--border); border-radius: 50px; padding: 3px 10px; font-size: 11px; font-weight: 500; color: var(--text-mid); }
+
+    /* WHY */
+    .why { padding: 88px 0; background: var(--navy); position: relative; overflow: hidden; }
+    .why::before { content: ''; position: absolute; top: -120px; right: -80px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(45,127,111,.18) 0%, transparent 70%); pointer-events: none; }
+    .why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; position: relative; z-index: 2; }
+    .why-content .section-label { color: var(--teal-lt); }
+    .why-content .section-title { color: var(--white); }
+    .why-content .section-sub   { color: rgba(255,255,255,.6); }
+    .why-list { margin-top: 28px; display: flex; flex-direction: column; gap: 18px; }
+    .why-item { display: flex; align-items: flex-start; gap: 14px; }
+    .why-check { width: 30px; height: 30px; border-radius: 50%; background: rgba(45,127,111,.2); border: 1px solid rgba(45,127,111,.35); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .why-check svg { width: 13px; height: 13px; color: var(--teal-lt); }
+    .why-item-title { font-size: 14.5px; font-weight: 600; color: var(--white); margin-bottom: 3px; }
+    .why-item-desc  { font-size: 13px; color: rgba(255,255,255,.52); line-height: 1.6; }
+    .why-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .stat-box { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius-md); padding: 26px 22px; transition: background .3s; }
+    .stat-box:hover { background: rgba(255,255,255,.1); }
+    .stat-box-num   { font-family: var(--font-display); font-size: 34px; font-weight: 700; color: var(--white); line-height: 1; margin-bottom: 5px; }
+    .stat-box-label { font-size: 12px; color: rgba(255,255,255,.45); letter-spacing: .04em; }
+    .stat-box-note  { font-size: 9.5px; color: rgba(255,255,255,.25); margin-top: 4px; font-style: italic; }
+    .stat-box:first-child { background: rgba(45,127,111,.2); border-color: rgba(45,127,111,.3); }
+    .stat-box:first-child .stat-box-num { color: #7EDBC7; }
+
+    /* SEO SECTION */
+    .seo-section { padding: 88px 0; background: var(--cream); }
+    .seo-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .google-mockup { background: var(--white); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); overflow: hidden; border: 1px solid var(--border); }
+    .google-bar { background: #F8F9FA; border-bottom: 1px solid var(--border); padding: 13px 16px; display: flex; align-items: center; gap: 10px; }
+    .google-dots { display: flex; gap: 6px; }
+    .google-dots span { width: 10px; height: 10px; border-radius: 50%; background: var(--border); }
+    .google-searchbar { flex: 1; background: var(--white); border: 1px solid var(--border); border-radius: 50px; padding: 6px 14px; font-size: 12px; color: var(--text-mid); }
+    .google-result { padding: 16px 20px; border-bottom: 1px solid var(--border); }
+    .google-result:last-child { border-bottom: none; }
+    .google-result.featured { background: #EAF4FF; border-left: 3px solid #1A73E8; }
+    .g-url   { font-size: 11px; color: #1A7012; margin-bottom: 2px; }
+    .g-title { font-size: 14px; font-weight: 600; color: #1A0DAB; margin-bottom: 3px; }
+    .g-desc  { font-size: 12px; color: var(--text-mid); line-height: 1.5; }
+    .g-badge { display: inline-block; font-size: 10px; font-weight: 600; background: #1A73E8; color: white; border-radius: 3px; padding: 1px 5px; margin-right: 5px; }
+    .seo-points { margin-top: 28px; display: flex; flex-direction: column; gap: 16px; }
+    .seo-point { display: flex; align-items: flex-start; gap: 14px; }
+    .seo-point-icon { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, var(--navy), var(--navy-mid)); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .seo-point-icon svg { width: 16px; height: 16px; color: white; }
+    .seo-point-text strong { display: block; font-size: 14.5px; font-weight: 600; color: var(--navy); margin-bottom: 3px; }
+    .seo-point-text span  { font-size: 13px; color: var(--text-mid); line-height: 1.6; }
+
+    /* CONTACT */
+    .contact { padding: 88px 0; background: var(--white); }
+    .contact-head { margin-bottom: 48px; }
+    .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+    .contact-details { display: flex; flex-direction: column; gap: 14px; margin-bottom: 22px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 14px; padding: 16px 18px; background: var(--cream); border-radius: var(--radius-md); border: 1px solid var(--border); }
+    .contact-icon { width: 40px; height: 40px; border-radius: 11px; background: var(--navy); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .contact-icon svg { width: 18px; height: 18px; color: white; }
+    .contact-item-label { font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--text-lt); margin-bottom: 3px; }
+    .contact-item-value { font-size: 14.5px; font-weight: 500; color: var(--navy); line-height: 1.5; }
+    .contact-btns { display: flex; flex-direction: column; gap: 10px; }
+    .contact-btns .btn { width: 100%; justify-content: center; padding: 15px; }
+    .map-frame { border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-md); height: 420px; }
+    .map-frame iframe { width: 100%; height: 100%; border: none; display: block; }
+
+    /* DEMO BANNER */
+    .demo-banner { padding: 72px 0; background: linear-gradient(135deg, #0C2030 0%, #0F2A3A 60%, #0A1F30 100%); position: relative; overflow: hidden; }
+    .demo-banner::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(255,255,255,.012) 40px, rgba(255,255,255,.012) 41px); }
+    .demo-banner::after  { content: ''; position: absolute; bottom: -120px; right: -80px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(184,132,74,.1) 0%, transparent 70%); }
+    .demo-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .demo-left .demo-tag { display: inline-block; background: rgba(184,132,74,.15); border: 1px solid rgba(184,132,74,.3); border-radius: 50px; padding: 5px 14px; font-size: 10.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-lt); margin-bottom: 18px; }
+    .demo-left .demo-title { font-family: var(--font-display); font-size: clamp(22px, 3.5vw, 34px); font-weight: 700; color: var(--white); line-height: 1.2; margin-bottom: 12px; }
+    .demo-left .demo-sub  { font-size: 14px; color: rgba(255,255,255,.5); line-height: 1.7; }
+    .demo-features { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+    .demo-feat { display: flex; align-items: flex-start; gap: 12px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius-sm); padding: 13px 16px; }
+    .demo-feat-icon { width: 20px; height: 20px; border-radius: 50%; background: rgba(45,127,111,.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+    .demo-feat-icon svg { width: 10px; height: 10px; color: #7EDBC7; }
+    .demo-feat-text strong { display: block; font-size: 13.5px; font-weight: 600; color: var(--white); margin-bottom: 2px; }
+    .demo-feat-text span  { font-size: 12px; color: rgba(255,255,255,.45); }
+    .demo-cta-note { font-size: 11px; color: rgba(255,255,255,.28); margin-top: 10px; text-align: center; }
+
+    /* FOOTER */
+    .footer { background: #0C1E2A; padding: 52px 0 28px; }
+    .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,.08); margin-bottom: 24px; }
+    .footer-logo .logo-name { font-size: 20px; color: var(--white); }
+    .footer-logo .logo-sub  { color: rgba(255,255,255,.4); }
+    .footer-desc { font-size: 13px; color: rgba(255,255,255,.42); line-height: 1.7; margin-top: 14px; max-width: 280px; }
+    .footer-col-title { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.3); margin-bottom: 14px; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { font-size: 13px; color: rgba(255,255,255,.5); transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--white); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,.25); }
+    .footer-sub-links { display: flex; gap: 20px; }
+    .footer-sub-links a { font-size: 12px; color: rgba(255,255,255,.25); transition: color .2s; }
+    .footer-sub-links a:hover { color: rgba(255,255,255,.5); }
+
+    /* WA FLOAT */
+    .wa-float { position: fixed; bottom: 24px; right: 24px; z-index: 800; width: 54px; height: 54px; border-radius: 50%; background: #25D366; color: white; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,.45); transition: transform .25s, box-shadow .25s; }
+    .wa-float:hover { transform: scale(1.1); box-shadow: 0 8px 28px rgba(37,211,102,.55); }
+    .wa-float svg { width: 26px; height: 26px; }
+
+    /* ANIMATIONS */
+    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-ham { display: block; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .hero-content { padding: 64px 0 60px; }
+      .how-steps { grid-template-columns: 1fr; }
+      .how-steps::before { display: none; }
+      .services-grid { grid-template-columns: repeat(2,1fr); }
+      .doctors-grid  { grid-template-columns: repeat(2,1fr); }
+      .why-inner     { grid-template-columns: 1fr; gap: 40px; }
+      .why-stats     { grid-template-columns: repeat(2,1fr); }
+      .seo-inner     { grid-template-columns: 1fr; }
+      .contact-inner { grid-template-columns: 1fr; }
+      .demo-inner    { grid-template-columns: 1fr; gap: 36px; }
+      .footer-inner  { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .doctors-grid  { grid-template-columns: 1fr; }
+      .footer-inner  { grid-template-columns: 1fr; gap: 28px; }
+      .hero-btns .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- URGENCY BAR -->
+  <div class="urgency-bar">
+    Open today &mdash; Walk-ins welcome. Emergency available 24/7.
+    <a href="tel:+919999999999">&nbsp;Call now: +91 99999 99999</a>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="nav-logo">
+          <div class="logo-mark">
+            <svg viewBox="0 0 24 24" fill="none">
+              <rect x="9" y="3" width="6" height="18" rx="1.5" fill="white"/>
+              <rect x="3" y="9" width="18" height="6" rx="1.5" fill="white"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">Pankhuri Hospital</span>
+            <span class="logo-sub">Kareli, Bareilly</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#how">Book Appointment</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#doctors">Doctors</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="tel:+919999999999" class="btn btn-outline" style="padding:10px 18px;font-size:13px;">Call Now</a>
+          <a href="https://wa.me/919999999999?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Pankhuri%20Hospital." class="btn btn-whatsapp" style="padding:10px 18px;font-size:13px;" target="_blank">WhatsApp</a>
+        </div>
+        <button class="nav-ham" id="navHam" aria-label="Menu">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <rect y="3"  width="22" height="2" rx="1" fill="currentColor"/>
+            <rect y="10" width="22" height="2" rx="1" fill="currentColor"/>
+            <rect y="17" width="22" height="2" rx="1" fill="currentColor"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#how"      onclick="closeMobile()">Book Appointment</a>
+      <a href="#services" onclick="closeMobile()">Our Services</a>
+      <a href="#doctors"  onclick="closeMobile()">Our Doctors</a>
+      <a href="#contact"  onclick="closeMobile()">Contact &amp; Map</a>
+      <a href="tel:+919999999999" style="color:var(--navy);font-weight:700;">Call: +91 99999 99999</a>
+      <a href="https://wa.me/919999999999" target="_blank" style="color:#25D366;font-weight:700;">WhatsApp Appointment</a>
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            <span>Open Today &mdash; Walk-ins Welcome</span>
+          </div>
+          <h1 class="hero-title">
+            Get Immediate<br/>Medical Care<br/>in <em>Bareilly</em>
+          </h1>
+          <p class="hero-sub">
+            When your family needs a doctor, you need someone close, trusted, and ready now. Pankhuri Hospital has been that hospital for families across Kareli and Bareilly.
+          </p>
+          <div class="hero-local">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            Kareli, Bareilly &mdash; near the main road, easily accessible
+          </div>
+          <div class="hero-btns">
+            <a href="tel:+919999999999" class="btn btn-call">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.64 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.55 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.51a16 16 0 0 0 5.93 5.93l1.75-1.75a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call Now
+            </a>
+            <a href="https://wa.me/919999999999?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Pankhuri%20Hospital." class="btn btn-whatsapp" target="_blank">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              Book on WhatsApp
+            </a>
+          </div>
+          <p class="hero-nudge">No waiting on hold. WhatsApp replies within minutes.</p>
+          <div class="hero-trust">
+            <div class="trust-item">
+              <span class="trust-num">10+</span>
+              <span class="trust-label">Years Active<small>Sample data</small></span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+              <span class="trust-num">5,000+</span>
+              <span class="trust-label">Patients Served<small>Sample data</small></span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+              <span class="trust-num">24/7</span>
+              <span class="trust-label">Emergency Care</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            <div class="hero-img-frame">
+              <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80&auto=format&fit=crop" alt="Pankhuri Hospital" loading="eager"/>
+            </div>
+            <div class="float-card fcard-1">
+              <div class="float-card-icon" style="background:#E8F5F0;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2A7F6F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div class="float-card-text"><div class="label">Status</div><div class="value">Open Today</div></div>
+            </div>
+            <div class="float-card fcard-2">
+              <div class="float-card-icon" style="background:#FFF0E8;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C4622D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <div class="float-card-text"><div class="label">Emergency</div><div class="value">24 / 7 Care</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- HOW TO BOOK -->
+  <section class="how" id="how">
+    <div class="container">
+      <div class="how-head fade-up" style="text-align:center;">
+        <span class="section-label">Simple Process</span>
+        <div class="gold-line" style="margin:12px auto 0;"></div>
+        <h2 class="section-title" style="margin-top:16px;">How to Book Your Appointment</h2>
+        <p class="section-sub" style="margin:0 auto;">Three steps. No long forms, no confusion. Direct access to the hospital &mdash; the way it should be.</p>
+      </div>
+      <div class="how-steps">
+        <div class="how-step fade-up">
+          <div class="how-step-num">1</div>
+          <h3 class="how-step-title">Call or WhatsApp Us</h3>
+          <p class="how-step-desc">Send a WhatsApp message or call directly. Tell us your concern and preferred time. We respond quickly.</p>
+        </div>
+        <div class="how-step fade-up" style="transition-delay:.1s">
+          <div class="how-step-num">2</div>
+          <h3 class="how-step-title">Confirm Your Slot</h3>
+          <p class="how-step-desc">We confirm your appointment usually within minutes. You get the doctor name and exact timing.</p>
+        </div>
+        <div class="how-step fade-up" style="transition-delay:.2s">
+          <div class="how-step-num">3</div>
+          <h3 class="how-step-title">Visit the Hospital</h3>
+          <p class="how-step-desc">Come to Pankhuri Hospital in Kareli, Bareilly. Walk to reception &mdash; we will be ready for you.</p>
+        </div>
+      </div>
+      <div class="how-cta fade-up">
+        <p>Ready? Reach us right now &mdash; call or message.</p>
+        <div class="how-cta-btns">
+          <a href="tel:+919999999999" class="btn btn-primary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.64 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.55 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.51a16 16 0 0 0 5.93 5.93l1.75-1.75a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call: +91 99999 99999
+          </a>
+          <a href="https://wa.me/919999999999?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment." class="btn btn-whatsapp" target="_blank">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Book on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services-head fade-up">
+        <span class="section-label">What We Treat</span>
+        <div class="gold-line"></div>
+        <h2 class="section-title">Medical Services in Bareilly</h2>
+        <p class="section-sub">Trusted by families across Kareli, Nawabganj, Civil Lines, and surrounding areas of Bareilly.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <div class="service-name">Gynecology</div>
+          <p class="service-desc">Safe deliveries, prenatal care, and complete women's health &mdash; handled with privacy and compassion for every family.</p>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:.08s">
+          <div class="service-icon" style="background:linear-gradient(135deg,#1E5C5A,#2A7F6F)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6M12 9v6"/><rect x="3" y="3" width="18" height="18" rx="4"/></svg>
+          </div>
+          <div class="service-name">Orthopedic Care</div>
+          <p class="service-desc">Joint pain, fractures, back problems &mdash; diagnosed and treated by an experienced orthopedic specialist, not guesswork.</p>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:.16s">
+          <div class="service-icon" style="background:linear-gradient(135deg,#2A4A6A,#1E6494)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/></svg>
+          </div>
+          <div class="service-name">General Surgery</div>
+          <p class="service-desc">Planned and emergency surgeries in a clean, well-maintained operation theatre with dedicated post-operative ward care.</p>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:.24s">
+          <div class="service-icon" style="background:linear-gradient(135deg,#7A2020,#B03030)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div class="service-name">Emergency Care</div>
+          <p class="service-desc">Medical emergencies do not wait. Our team is ready 24 hours a day, 7 days a week &mdash; including nights and festivals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- DOCTORS -->
+  <section class="doctors" id="doctors">
+    <div class="container">
+      <div class="doctors-head fade-up">
+        <span class="section-label">Our Team</span>
+        <div class="gold-line"></div>
+        <h2 class="section-title">Doctors You Can Trust</h2>
+        <p class="section-sub">Qualified specialists who take the time to listen, explain, and treat &mdash; not just prescribe and send you away.</p>
+      </div>
+      <div class="doctors-grid">
+
+        <div class="doctor-card fade-up">
+          <div class="doctor-img-placeholder">
+            <svg width="100%" viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#D6E8EF"/><stop offset="100%" stop-color="#A8C8E0"/></linearGradient></defs>
+              <rect width="400" height="260" fill="url(#bg1)"/>
+              <ellipse cx="200" cy="295" rx="250" ry="90" fill="#14354A" opacity=".12"/>
+              <circle cx="200" cy="96" r="48" fill="#14354A" opacity=".15"/>
+              <ellipse cx="200" cy="240" rx="72" ry="46" fill="#14354A" opacity=".12"/>
+              <rect x="160" y="140" width="80" height="80" rx="8" fill="white" opacity=".28"/>
+              <circle cx="200" cy="176" r="10" fill="none" stroke="#14354A" stroke-width="2.5" opacity=".22"/>
+            </svg>
+          </div>
+          <div class="doctor-info">
+            <div class="doctor-sample">Sample Profile</div>
+            <span class="doctor-spec">Orthopedic Surgeon</span>
+            <h3 class="doctor-name">Dr. A. K. Sharma</h3>
+            <p class="doctor-bio">Specialist in joint replacement, fracture management, and chronic joint pain. Profile will be replaced with the hospital's actual doctor.</p>
+            <div class="doctor-tags"><span class="doctor-tag">Joint Pain</span><span class="doctor-tag">Fractures</span><span class="doctor-tag">Arthritis</span></div>
+          </div>
+        </div>
+
+        <div class="doctor-card fade-up" style="transition-delay:.1s">
+          <div class="doctor-img-placeholder">
+            <svg width="100%" viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#D8ECD6"/><stop offset="100%" stop-color="#A8D4A6"/></linearGradient></defs>
+              <rect width="400" height="260" fill="url(#bg2)"/>
+              <ellipse cx="200" cy="295" rx="250" ry="90" fill="#1A4A35" opacity=".12"/>
+              <circle cx="200" cy="96" r="48" fill="#1A4A35" opacity=".15"/>
+              <ellipse cx="200" cy="240" rx="72" ry="46" fill="#1A4A35" opacity=".12"/>
+              <rect x="160" y="140" width="80" height="80" rx="8" fill="white" opacity=".28"/>
+              <circle cx="200" cy="176" r="10" fill="none" stroke="#1A4A35" stroke-width="2.5" opacity=".22"/>
+            </svg>
+          </div>
+          <div class="doctor-info">
+            <div class="doctor-sample">Sample Profile</div>
+            <span class="doctor-spec">Gynecologist &amp; Obstetrician</span>
+            <h3 class="doctor-name">Dr. S. Verma</h3>
+            <p class="doctor-bio">Specialist in safe deliveries, high-risk pregnancy, and women's reproductive health. Actual doctor profile will be added here.</p>
+            <div class="doctor-tags"><span class="doctor-tag">Prenatal Care</span><span class="doctor-tag">Safe Delivery</span><span class="doctor-tag">PCOS</span></div>
+          </div>
+        </div>
+
+        <div class="doctor-card fade-up" style="transition-delay:.2s">
+          <div class="doctor-img-placeholder">
+            <svg width="100%" viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#EDE8DC"/><stop offset="100%" stop-color="#D4C8B0"/></linearGradient></defs>
+              <rect width="400" height="260" fill="url(#bg3)"/>
+              <ellipse cx="200" cy="295" rx="250" ry="90" fill="#4A3820" opacity=".12"/>
+              <circle cx="200" cy="96" r="48" fill="#4A3820" opacity=".15"/>
+              <ellipse cx="200" cy="240" rx="72" ry="46" fill="#4A3820" opacity=".12"/>
+              <rect x="160" y="140" width="80" height="80" rx="8" fill="white" opacity=".28"/>
+              <circle cx="200" cy="176" r="10" fill="none" stroke="#4A3820" stroke-width="2.5" opacity=".22"/>
+            </svg>
+          </div>
+          <div class="doctor-info">
+            <div class="doctor-sample">Sample Profile</div>
+            <span class="doctor-spec">General Surgeon</span>
+            <h3 class="doctor-name">Dr. R. Gupta</h3>
+            <p class="doctor-bio">Experienced in laparoscopic and general surgeries. Hernia, appendix, abdominal procedures. Real profile to be customized here.</p>
+            <div class="doctor-tags"><span class="doctor-tag">Laparoscopy</span><span class="doctor-tag">Hernia</span><span class="doctor-tag">Abdominal</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- WHY CHOOSE US -->
+  <section class="why" id="why">
+    <div class="container">
+      <div class="why-inner">
+        <div class="why-content fade-up">
+          <span class="section-label">Why Families Choose Us</span>
+          <div class="gold-line"></div>
+          <h2 class="section-title">Compassionate Care for Your Family</h2>
+          <p class="section-sub">We understand that when you walk into a hospital, you are worried. Our job is to make that easier &mdash; from the first call to full recovery.</p>
+          <ul class="why-list">
+            <li class="why-item">
+              <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div><div class="why-item-title">Trusted During Emergencies</div><div class="why-item-desc">When something goes wrong at night or on a holiday, families in Kareli and Bareilly call us first. We are always ready &mdash; not just on paper.</div></div>
+            </li>
+            <li class="why-item">
+              <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div><div class="why-item-title">Affordable, No Hidden Fees</div><div class="why-item-desc">Clear pricing before any procedure. No surprises. Quality care that local families in Bareilly can actually afford without worry.</div></div>
+            </li>
+            <li class="why-item">
+              <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div><div class="why-item-title">Doctors Who Explain Clearly</div><div class="why-item-desc">We speak your language. Every patient is told exactly what is happening, why, and what comes next. No confusion, no fear.</div></div>
+            </li>
+            <li class="why-item">
+              <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div><div class="why-item-title">Clean, Well-Maintained Facilities</div><div class="why-item-desc">A proper OT, clean wards, and essential diagnostics &mdash; all available locally right here in Bareilly, without going to Lucknow or Delhi.</div></div>
+            </li>
+          </ul>
+        </div>
+        <div class="why-stats fade-up" style="transition-delay:.15s">
+          <div class="stat-box">
+            <div class="stat-box-num">5,000+</div>
+            <div class="stat-box-label">Patients Treated</div>
+            <div class="stat-box-note">Sample &mdash; to be updated</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-box-num">10+</div>
+            <div class="stat-box-label">Years in Bareilly</div>
+            <div class="stat-box-note">Sample &mdash; to be updated</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-box-num">3</div>
+            <div class="stat-box-label">Senior Specialists</div>
+            <div class="stat-box-note">Sample &mdash; to be updated</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-box-num">24/7</div>
+            <div class="stat-box-label">Emergency Available</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- GOOGLE VISIBILITY -->
+  <section class="seo-section" id="seo">
+    <div class="container">
+      <div class="seo-inner">
+        <div class="fade-up">
+          <div class="google-mockup">
+            <div class="google-bar">
+              <div class="google-dots"><span></span><span></span><span></span></div>
+              <div class="google-searchbar">hospital near me bareilly</div>
+            </div>
+            <div class="google-result featured">
+              <div class="g-url">pankhurihospital.in &mdash; Kareli, Bareilly</div>
+              <div class="g-title"><span class="g-badge">Top</span>Pankhuri Hospital Bareilly &mdash; Book Appointment Today</div>
+              <div class="g-desc">Gynecology, Orthopedic, Surgery &amp; Emergency. Trusted by Kareli &amp; Bareilly families. Call or WhatsApp now.</div>
+            </div>
+            <div class="google-result">
+              <div class="g-url">pankhurihospital.in</div>
+              <div class="g-title">Pankhuri Hospital &mdash; Kareli Bareilly &mdash; 24/7 Emergency</div>
+              <div class="g-desc">Experienced doctors for gynecology, orthopedic care &amp; surgery. Serving Kareli, Civil Lines, Nawabganj. Open Monday to Saturday.</div>
+            </div>
+            <div class="google-result" style="opacity:.38;">
+              <div class="g-url">someotherhospital.com</div>
+              <div class="g-title">Hospital in Bareilly &mdash; General Services</div>
+              <div class="g-desc">Medical services available. Contact for appointments.</div>
+            </div>
+          </div>
+          <p style="font-size:11px;color:var(--text-lt);margin-top:10px;text-align:center;">Simulated result &mdash; illustrative only. Actual ranking requires SEO setup.</p>
+        </div>
+        <div class="seo-content fade-up" style="transition-delay:.12s">
+          <span class="section-label">Online Visibility</span>
+          <div class="gold-line"></div>
+          <h2 class="section-title">How Patients Find Hospitals Today</h2>
+          <p class="section-sub">In Bareilly right now, someone is searching "hospital near me" on their phone. The question is &mdash; do they see your hospital, or someone else's?</p>
+          <div class="seo-points">
+            <div class="seo-point">
+              <div class="seo-point-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <div class="seo-point-text">
+                <strong>Appear in "hospital near me" searches</strong>
+                <span>Local SEO setup puts your hospital in front of people searching in Bareilly &mdash; before they call anyone else.</span>
+              </div>
+            </div>
+            <div class="seo-point">
+              <div class="seo-point-icon" style="background:linear-gradient(135deg,#1E5C5A,#2A7F6F)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.64 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.55 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.51a16 16 0 0 0 5.93 5.93l1.75-1.75a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="seo-point-text">
+                <strong>Direct WhatsApp bookings, no middleman</strong>
+                <span>Patients tap the WhatsApp button and message you directly. Appointments confirmed in minutes, no app needed.</span>
+              </div>
+            </div>
+            <div class="seo-point">
+              <div class="seo-point-icon" style="background:linear-gradient(135deg,#7A5020,#B07030)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div class="seo-point-text">
+                <strong>Steady patient growth, month over month</strong>
+                <span>Unlike a pamphlet or banner, a website works 24/7 and compounds over time &mdash; more visibility, more patients every month.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-head fade-up">
+        <span class="section-label">Come Visit Us</span>
+        <div class="gold-line"></div>
+        <h2 class="section-title">Find Us in Kareli, Bareilly</h2>
+        <p class="section-sub">Serving Kareli, Civil Lines, Nawabganj, and surrounding areas. Easily accessible from the main road. Walk-ins are always welcome.</p>
+      </div>
+      <div class="contact-inner">
+        <div class="fade-up">
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="contact-item-label">Address</div>
+                <div class="contact-item-value">Kareli, Bareilly<br/>Uttar Pradesh</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.64 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.55 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.51a16 16 0 0 0 5.93 5.93l1.75-1.75a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="contact-item-label">Phone</div>
+                <div class="contact-item-value">+91 99999 99999</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <div class="contact-item-label">Working Hours</div>
+                <div class="contact-item-value">Mon &ndash; Sat: 8:00 AM &ndash; 8:00 PM<br/>Emergency: 24 hours, 7 days</div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-btns">
+            <a href="tel:+919999999999" class="btn btn-primary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.64 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.55 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.51a16 16 0 0 0 5.93 5.93l1.75-1.75a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call Now: +91 99999 99999
+            </a>
+            <a href="https://wa.me/919999999999?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Pankhuri%20Hospital%2C%20Bareilly." class="btn btn-whatsapp" target="_blank">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              WhatsApp Appointment
+            </a>
+          </div>
+        </div>
+        <div class="map-frame fade-up" style="transition-delay:.15s">
+          <iframe src="https://maps.google.com/maps?q=Pankhuri+Hospital+Kareli+Bareilly+Uttar+Pradesh&output=embed&z=16" title="Pankhuri Hospital, Kareli, Bareilly" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- DEMO BANNER (sales-focused) -->
+  <section class="demo-banner">
+    <div class="container">
+      <div class="demo-inner">
+        <div class="demo-left fade-up">
+          <div class="demo-tag">Preview Version</div>
+          <h2 class="demo-title">This Website Helps You Get Patients From Google &mdash; Daily.</h2>
+          <p class="demo-sub">
+            When someone in Bareilly searches "hospital near me" at 11 PM, they should find your hospital &mdash; not someone else's. This system is built to make exactly that happen.
+          </p>
+        </div>
+        <div class="demo-right fade-up" style="transition-delay:.12s">
+          <div class="demo-features">
+            <div class="demo-feat">
+              <div class="demo-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="demo-feat-text">
+                <strong>Appear in "hospital near me" searches</strong>
+                <span>Local SEO so Google shows your hospital to people searching in Bareilly</span>
+              </div>
+            </div>
+            <div class="demo-feat">
+              <div class="demo-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="demo-feat-text">
+                <strong>Direct WhatsApp appointment bookings</strong>
+                <span>Patients contact you directly &mdash; no third-party apps, no commission to anyone</span>
+              </div>
+            </div>
+            <div class="demo-feat">
+              <div class="demo-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="demo-feat-text">
+                <strong>Custom domain + hosting included</strong>
+                <span>Your own professional URL, deployed and live within days, fully customized</span>
+              </div>
+            </div>
+          </div>
+          <a href="https://wa.me/919999999999?text=Hello%2C%20I%20saw%20the%20Pankhuri%20Hospital%20website%20demo%20and%20want%20to%20know%20more%20about%20the%20full%20system." class="btn btn-whatsapp" style="width:100%;justify-content:center;" target="_blank">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Get the Full System &mdash; Message on WhatsApp
+          </a>
+          <p class="demo-cta-note">This demo was built to show you what is possible. The real version uses your actual doctors, photos &amp; phone number.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <a href="#" class="nav-logo footer-logo" style="display:inline-flex;margin-bottom:14px;">
+            <div class="logo-mark">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="9" y="3" width="6" height="18" rx="1.5" fill="white"/><rect x="3" y="9" width="18" height="6" rx="1.5" fill="white"/></svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">Pankhuri Hospital</span>
+              <span class="logo-sub">Kareli, Bareilly</span>
+            </div>
+          </a>
+          <p class="footer-desc">Trusted healthcare for families across Kareli, Civil Lines, Nawabganj, and all of Bareilly, Uttar Pradesh.</p>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Navigation</div>
+          <ul>
+            <li><a href="#how">Book Appointment</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#doctors">Doctors</a></li>
+            <li><a href="#contact">Contact &amp; Map</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact</div>
+          <ul>
+            <li><a href="tel:+919999999999">+91 99999 99999</a></li>
+            <li><a href="#contact">Kareli, Bareilly, UP</a></li>
+            <li><a href="https://wa.me/919999999999" target="_blank">WhatsApp Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">2025 Pankhuri Hospital, Bareilly. Demo preview &mdash; all details are sample content.</p>
+        <div class="footer-sub-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/919999999999?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Pankhuri%20Hospital." class="wa-float" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 12); });
+    const ham = document.getElementById('navHam'), menu = document.getElementById('mobileMenu');
+    ham.addEventListener('click', () => menu.classList.toggle('open'));
+    function closeMobile() { menu.classList.remove('open'); }
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }); }, { threshold: 0.1 });
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
